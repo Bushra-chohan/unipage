@@ -1,0 +1,302 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.header{
+    min-height: 100vh;
+    width: 100%;
+    background-image: linear-gradient(
+    rgba(4,9,30,0.7),rgba(4,9,30,0.7)), url(images/banner.png);
+    background-size: cover;
+    position: relative;
+
+}
+
+nav{
+    display: flex;
+    color: white;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: 80px;
+    margin-right: 70px;
+    padding-top: 30px;
+}
+
+.page-links ul li{
+    position: relative;
+    list-style: none;
+    display: inline-block;
+    padding-left: 30px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 14px;
+}
+
+
+.page-links ul li::after{
+    content: '';
+    background: #f44336;
+    height: 3px;
+    position: absolute;
+    top: 20px;
+    width: 0%;
+    bottom:0;
+    right: -5px;
+    transition: 0.7s;
+}
+
+.page-links ul li:hover::after{
+    width: 70%;
+}
+
+.logo{
+    width: 200px;
+}
+
+.slider{
+    padding-top: 150px;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+}
+
+.title{
+    font-size: 50px;
+    font-weight: bold;
+    padding-bottom: 30px;
+}
+
+.slider-text{
+    font-size: 15px;
+    line-height: 25px;
+    opacity: 0.8;
+}
+
+.slider-button{
+    border-width: 1px;
+    border-color: white;
+    background-color: transparent;
+    width: 200px;
+    height: 45px;
+    color: white;
+    margin-top: 40px;
+    cursor: pointer;
+    position: relative;
+    z-index: 1;
+    
+}
+
+span{
+    background: #f44336;
+    z-index: 2;
+    position: absolute;
+    bottom: 0;
+    left:0;
+    height: 100%;
+    width: 0%;
+    z-index: -1;
+    transition: 1.2s;
+}
+
+.slider-button:hover span{
+    width: 100%;
+}
+
+
+@media(min-width: 700px){
+    .cross{
+        display: none;
+    }
+}
+
+
+
+@media(max-width: 700px){
+    .title{
+        font-size: 30px
+
+    }
+    .page-links ul li{
+        display: block;
+    }
+    .page-links ul{
+        padding-top: 50px;
+    }
+    .page-links{
+        position: absolute;
+        height: 100vh;
+        width: 200px;
+        top: 0;
+        right: 0;
+        text-align: left;
+        z-index:2;
+        background-color: #f44336;
+        padding-top: 10px;
+        line-height: 35px;
+    }
+    .cross{
+        margin-left: 15px;
+        border-width: 0;
+        background-color: #f44336;
+        color: white;
+        font-weight: bold;
+        font-size: 16px;
+        cursor: pointer;
+    }
+}
+
+input{
+    width: 350px;
+    height: 40px;
+    border-color:#f44336;
+    border-width: 2px;
+    border-radius: 60px;
+    padding-left: 20px;
+    font-size: 16px;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-left: 500px;
+    margin-top: 70px;
+    margin-bottom: 100px;
+}
+
+.name-button{
+    width: 110px;
+    height: 36px;
+    border-radius: 60px;
+    border-width: 0px;
+    background-color: #f44336;
+    color: white;
+    margin-left: -118px;
+    padding-top: 1px ;
+    cursor: pointer;
+}
+
+
+/* This is for the courses section */
+
+.courses{
+    margin-top: 100px;
+}
+
+.courses-title{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 34px;
+    text-align: center;
+
+}
+
+.courses-text{
+    font-size: 15px;
+    color: black;
+    opacity: 0.7;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-top: 20px;
+}
+
+.courselist{
+    margin-top:  70px;
+    padding-right: 10px;
+    padding-left: 40px;
+    display: flex;
+    padding-right: 100px;
+    justify-content: space-between;
+    width: 93%;
+    margin-bottom: 80px;
+}
+
+.course-box{
+    padding-right: 50px;
+    text-align: center;
+    background-color: rgb(255, 232, 232,0.5);
+    height: 200px;
+    padding-top: 25px;
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 22px;
+    margin-right: 20px;
+    margin-left: 30px;
+    padding-left: 38px;
+    transition: 0.5s;
+}
+.course-title{
+    padding-bottom: 10px;
+    font-size: 19px;
+}
+.course-detail{
+    opacity: 0.7;
+    font-size: 14px;
+}
+
+.course-box:hover{
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2 );
+}
+
+/* This is for campuses */
+
+.campus-images{
+    margin-left: 200px;
+    margin-right: 200px;
+    margin-top: 60px;
+    margin-bottom: 80px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.campus-image{
+    height: 400px;
+    width: 300px;
+    border-radius: 3%;
+    margin-right: -20px;
+    background: #f44336;
+}
+
+.campus-text{
+    position: relative;
+    display: inline;
+    left: 300px;
+    top: -460px;
+    padding-right: 250px;
+    font-family: Arial, Helvetica, sans-serifs;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+
+/* This is for facilities */
+
+.facilities-images{
+    display: flex;
+    justify-content: space-between;
+    margin: 13%;
+    margin-top: 70px;
+}
+
+.facilities-image{
+    width: 300px;
+    border-radius: 2%;
+}
+
+.facilities-info{
+    display: flex;
+    text-align: left;
+    font-family: Arial, Helvetica, sans-serif;
+    justify-content: space-between;
+    margin-left: 175px;
+    margin-top: -150px;
+    margin-right: 180px;
+}
+
+.facilities-text{
+    width: 300px;
+}
+
+.facilities-name{
+    padding-bottom: 10px;
+    font-size: 18px;
+}
+
+.facilities-details{
+    line-height: 23px;
+    opacity: 0.7;
+}
